@@ -30,8 +30,13 @@ h3 {
   color: white;
 }
 
+.btn-default {
+  background-color: white;
+  color: black;
+}
+
 .btn:hover {
-  background-color: blue;
+  background-color: grey;
 }
 
 .btn:focus {
