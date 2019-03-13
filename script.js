@@ -2,7 +2,8 @@ var css = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
-var button = document.getElementById("randomiseButton");
+var randomiseButton = document.getElementById("randomiseButton");
+var defaultButton= document.getElementById("defaultButton");
 var color1random = '#'+Math.floor(Math.random()*16777215).toString(16);
 var color2random = '#'+Math.floor(Math.random()*16777215).toString(16);
 
@@ -36,7 +37,16 @@ function randomGradient() {
 
 let buttonClicks = 0;
 
-button.onclick = function() {
+randomiseButton.onclick = function() {
   randomGradient();
    buttonClicks++;
 };
+
+defaultButton.addEventListener("click", function() {
+  body.style.background =
+  "linear-gradient(to right, "
+  + "red"
+  + ", "
+  + "yellow"
+  + ")";
+});
